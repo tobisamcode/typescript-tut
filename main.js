@@ -37,3 +37,23 @@ var ninjaOne;
 ninjaOne = { name: 'Yushi', age: 20 };
 var ninjaTwo;
 ninjaTwo = { name: 'mario', age: 30, beltColor: "pink" };
+// ANY
+var num;
+num = true;
+console.log(num);
+num = 'hello';
+num = {
+    name: 'luigi'
+};
+console.log(num);
+var mix = [];
+mix.push(5);
+mix.push('mario');
+mix.push(true);
+console.log(mixed);
+var ninj;
+ninj = {
+    name: 'yushi',
+    age: 26
+};
+console.log(ninj);
