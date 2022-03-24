@@ -70,3 +70,35 @@ let ninjaTwo: {
 
 ninjaTwo = {name: 'mario', age: 30, beltColor: "pink"};
 
+
+
+
+// ANY
+
+let num: any
+
+num = true;
+console.log(num);
+num = 'hello'
+num = {
+    name: 'luigi'
+};
+console.log(num);
+
+let mix: any[] = [];
+
+mix.push(5);
+mix.push('mario');
+mix.push(true);
+console.log(mixed);
+
+let ninj: {
+    name: any,
+    age: any
+};
+
+ninj = {
+    name: 'yushi',
+    age: 26
+}
+console.log(ninj);
