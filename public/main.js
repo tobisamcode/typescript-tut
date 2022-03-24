@@ -73,4 +73,33 @@ const minus = (a, b) => {
     return a - b;
 };
 let result = minus(10, 7);
-// result = 'something'
+const logDetails = (uid, item) => {
+    console.log(`${item} has a uid of ${uid}`);
+};
+const grt = (user) => {
+    console.log(`${user.name} says hello`);
+};
+const grtAgain = (user) => {
+    console.log(`${user.name} says hello`);
+};
+// Function Signature
+// example 1
+let greetings;
+greetings = (name, greeting) => {
+    console.log(`${name} says ${greeting}`);
+};
+// example 2
+let calc;
+calc = (numOne, numTwo, action) => {
+    if (action === 'add') {
+        return numOne + numTwo;
+    }
+    else {
+        return numOne - numTwo;
+    }
+};
+// example 3
+let logDetail;
+logDetail = (ninja) => {
+    console.log(`${ninja.name} is ${ninja.age} years old`);
+};
