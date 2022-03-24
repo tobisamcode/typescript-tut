@@ -58,3 +58,13 @@ ninj = {
     age: 26
 };
 console.log(ninj);
+// function
+let greet = () => {
+    console.log('hello');
+};
+greet();
+// greet = 'hello'
+const add = (a, b) => {
+    console.log(a + b);
+};
+add(5, 10);
