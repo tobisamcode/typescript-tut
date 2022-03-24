@@ -128,3 +128,76 @@ const minus = ( a: number, b: number) => {
 
 let result = minus(10, 7);
 // result = 'something'
+
+
+
+
+
+
+// Type Aliases
+
+
+type StringOrNUm = string | number;
+type objName = {
+    name: string, 
+    uid: string | number };
+
+
+const logDetails = (uid: string | number, item: string) => {
+    console.log(`${item} has a uid of ${uid}`);
+}
+
+const grt = (user: objName) => {
+    console.log(`${user.name} says hello`);
+}
+
+const grtAgain = (user: objName) => {
+    console.log(`${user.name} says hello`);
+}
+
+
+
+
+
+// Function Signature
+
+// example 1
+let greetings: (a: string, b: string) => void;
+
+greetings = (name: string, greeting: string) => {
+    console.log(`${name} says ${greeting}`);
+}
+
+// example 2
+let calc: (a: number, b: number, c: string) => number;
+
+calc = (numOne: number, numTwo: number, action: string) => {
+    if (action === 'add') {
+        return numOne + numTwo;
+    } else {
+        return numOne - numTwo;
+    }
+}
+
+
+// example 3
+let logDetail: (obj:
+    {
+        name: string,
+        age: number
+    }) => void;
+
+logDetail = ( ninja:
+    {
+        name: string,
+        age: number
+    }) => {
+        console.log(`${ninja.name} is ${ninja.age} years old`);
+}
+
+
+
+
+
+
+
