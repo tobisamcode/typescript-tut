@@ -1,6 +1,7 @@
 import { Invoice } from './classes/Invoice.js';
 import { Payment } from './classes/Payment.js';
 import { ListTemplate } from './classes/ListTemplate.js';
+import { ResourceApp } from './interfaces/Resource.js';
 const form = document.querySelector('.new-item-form');
 // console.log(form.children);
 // inputs
@@ -29,4 +30,14 @@ const addUID = (obj) => {
 };
 let docOne = addUID({ name: 'yoshi', age: 40 });
 let docTwo = addUID;
-console.log(docOne);
+const docThree = {
+    uid: 1,
+    resourceName: ResourceApp.PRODUCT,
+    data: { name: 'shaun' }
+};
+const docFour = {
+    uid: 2,
+    resourceName: ResourceApp.AGE,
+    data: ['bread', 'milk', 'toilet roll']
+};
+console.log(docThree, docFour);
