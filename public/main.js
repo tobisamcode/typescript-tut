@@ -1,4 +1,3 @@
-// Interfaces
 import { Invoice } from './classes/Invoice.js';
 const InvoiceOne = new Invoice('mario', 'work on the mario website', 500);
 const InvoiceTwo = new Invoice('maartins', 'work on the martins website', 300);
