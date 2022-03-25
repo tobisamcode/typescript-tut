@@ -2,23 +2,32 @@ import { Invoice } from './classes/Invoice.js'
 import { Payment } from './classes/Payment.js'
 import { HasFormatter } from './interfaces/HasFormatter.js'
 
+// let docOne: HasFormatter;
+// let docTwo: HasFormatter;
+
+// docOne = new Invoice('yoshi', 'web work', 250);
+// docTwo= new Payment('mario', 'plumbing work', 200);
+
+// let docs: HasFormatter[] = [];
+// docs.push(docOne);
+// docs.push(docTwo);
 
 
-const InvoiceOne = new Invoice('mario', 'work on the mario website', 500);
-const InvoiceTwo = new Invoice('maartins', 'work on the martins website', 300);
+// const InvoiceOne = new Invoice('mario', 'work on the mario website', 500);
+// const InvoiceTwo = new Invoice('maartins', 'work on the martins website', 300);
 
-// console.log(InvoiceOne, InvoiceTwo);
+// // console.log(InvoiceOne, InvoiceTwo);
 
-let Invoices: Invoice[] = [];
-Invoices.push(InvoiceOne);
-Invoices.push(InvoiceTwo);
+// let Invoices: Invoice[] = [];
+// Invoices.push(InvoiceOne);
+// Invoices.push(InvoiceTwo);
 
-// InvoiceOne.client = 'yoshi';
-InvoiceTwo.amount = 400;
+// // InvoiceOne.client = 'yoshi';
+// InvoiceTwo.amount = 400;
 
-Invoices.forEach(inv => {
-    console.log(inv.client, inv.amount, inv.format());
-})
+// Invoices.forEach(inv => {
+//     console.log(inv.client, inv.amount, inv.format());
+// })
 
 
 
@@ -45,6 +54,14 @@ const amount = document.querySelector('#amount') as HTMLInputElement;
 
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
+
+    let doc: HasFormatter;
+
+    if (type.value === 'invoice') {
+        doc = new Invoice(tofrom.value, details.value, amount.valueAsNumber);
+    } else {
+        doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
+    }
 
     console.log(
         type.value,
