@@ -1,20 +1,7 @@
-// Interfaces
-
-interface IsPerson {
-    name: string;
-    age: number;
-    speak(a: string): void;
-    spend(a: number): number;
-}
-
-
-
-
-
-
-
-
 import { Invoice } from './classes/Invoice.js'
+import { Payment } from './classes/Payment.js'
+import { HasFormatter } from './interfaces/HasFormatter.js'
+
 
 
 const InvoiceOne = new Invoice('mario', 'work on the mario website', 500);
