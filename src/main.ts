@@ -1,20 +1,21 @@
-// classes
+// Interfaces
 
-class Invoice {
-    // readonly client: string;
-    // private details: string;
-    // public amount: number;
-
-    constructor(
-        readonly client: string,
-        private details: string,
-        public amount: number
-    ) {}
-
-    format() {
-        return `${this.client} owes E${this.amount} for ${this.details}`
-    }
+interface IsPerson {
+    name: string;
+    age: number;
+    speak(a: string): void;
+    spend(a: number): number;
 }
+
+
+
+
+
+
+
+
+import { Invoice } from './classes/Invoice.js'
+
 
 const InvoiceOne = new Invoice('mario', 'work on the mario website', 500);
 const InvoiceTwo = new Invoice('maartins', 'work on the martins website', 300);
@@ -32,6 +33,12 @@ Invoices.forEach(inv => {
     console.log(inv.client, inv.amount, inv.format());
 })
 
+
+
+
+
+
+//              DOM                  
 
 // const anchor = document.querySelector('a')!;
 
