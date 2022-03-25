@@ -202,3 +202,30 @@ logDetail ({name: 'Tunde', age: 33})
 
 
 
+// Interfaces
+
+interface IsPerson {
+    name: string;
+    age: number;
+    speak(a: string): void;
+    spend(a: number): number;
+}
+
+const me: IsPerson = {
+    name: 'shaun',
+    age: 29,
+    speak(text: string): void {
+        console.log(text);
+    },
+    spend(amount: number): number {
+        console.log('i spent', amount);
+        return amount;
+    }
+};
+
+// with a function
+const greetPerson = (person: IsPerson) => {
+    console.log('how are you doing',person.name, '?');
+}
+
+greetPerson(me);
