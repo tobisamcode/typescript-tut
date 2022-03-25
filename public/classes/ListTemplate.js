@@ -12,8 +12,10 @@ export class ListTemplate {
         li.append(p);
         if (pos === 'start') {
             this.container.prepend(li);
-        } else {
+        }
+        else {
             this.container.append(li);
         }
-    };
+    }
+    ;
 }
