@@ -1,11 +1,10 @@
-import { Invoice } from './classes/Invoice.js'
-import { Payment } from './classes/Payment.js'
-import { HasFormatter } from './interfaces/HasFormatter.js'
+import { Invoice } from './classes/Invoice.js';
+import { Payment } from './classes/Payment.js';
+import { HasFormatter } from './interfaces/HasFormatter.js';
 import { ListTemplate } from './classes/ListTemplate.js';
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
 // console.log(form.children);
-
 
 // inputs
 const type = document.querySelector('#type') as HTMLSelectElement;
@@ -17,7 +16,6 @@ const amount = document.querySelector('#amount') as HTMLInputElement;
 
 const ul = document.querySelector('ul')!;
 const list = new ListTemplate(ul);
-
 
 form.addEventListener('submit', (e: Event) => {
     e.preventDefault();
@@ -32,3 +30,18 @@ form.addEventListener('submit', (e: Event) => {
 
     list.render(doc, type.value, 'end');
 });
+
+
+
+// GENERICS
+
+const addUID = <T extends object>(obj: T) => {
+    let uid = Math.floor(Math.random() * 100);
+    return {...obj, uid};
+}
+
+let docOne = addUID({name: 'yoshi', age: 40});
+let docTwo = addUID
+
+console.log(docOne);
+
