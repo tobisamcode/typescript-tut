@@ -104,3 +104,19 @@ logDetail = (ninja) => {
     console.log(`${ninja.name} is ${ninja.age} years old`);
 };
 logDetail({ name: 'Tunde', age: 33 });
+const me = {
+    name: 'shaun',
+    age: 29,
+    speak(text) {
+        console.log(text);
+    },
+    spend(amount) {
+        console.log('i spent', amount);
+        return amount;
+    }
+};
+// with a function
+const greetPerson = (person) => {
+    console.log('how are you doing', person.name, '?');
+};
+greetPerson(me);
