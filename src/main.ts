@@ -2,6 +2,9 @@ import { Invoice } from './classes/Invoice.js';
 import { Payment } from './classes/Payment.js';
 import { HasFormatter } from './interfaces/HasFormatter.js';
 import { ListTemplate } from './classes/ListTemplate.js';
+import { Resource } from './interfaces/Resource.js'
+import { ResourceApp } from './interfaces/Resource.js';
+
 
 const form = document.querySelector('.new-item-form') as HTMLFormElement;
 // console.log(form.children);
@@ -27,7 +30,6 @@ form.addEventListener('submit', (e: Event) => {
     } else {
         doc = new Payment(tofrom.value, details.value, amount.valueAsNumber);
     }
-
     list.render(doc, type.value, 'end');
 });
 
@@ -43,5 +45,17 @@ const addUID = <T extends object>(obj: T) => {
 let docOne = addUID({name: 'yoshi', age: 40});
 let docTwo = addUID
 
-console.log(docOne);
 
+const docThree: Resource <object> = {
+    uid: 1,
+    resourceName: ResourceApp.PRODUCT,
+    data: {name: 'shaun'}
+}
+
+const docFour: Resource <string[]> = {
+    uid: 2,
+    resourceName: ResourceApp.AGE,
+    data: ['bread', 'milk', 'toilet roll']
+}
+
+console.log(docThree, docFour);
